@@ -1,0 +1,90 @@
+h1 {
+    color: white;
+    background-color: #ff7878;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 30px;
+    text-align: center;
+    border-radius: 100px;
+  }
+  
+  h4 {
+    background-color: #ff7878;
+    width: 600px;
+    text-align: center;
+    font-weight: 500px;
+    font-size: large;
+  }
+  
+  body {
+    background-color: whitesmoke;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  #filterDiv {
+    padding: 10px;
+  }
+  #labelInput {
+    color: black;
+    font-weight: bolder;
+  }
+  #inputValue {
+    width: 200px;
+    height: 25px;
+  }
+  
+  #inputError {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+  }
+  button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: large;
+    background-color: #cee5d0;
+    height: 35px;
+    border: none;
+    transition-duration: 0.4s;
+  }
+  
+  button:hover {
+    background-color: #4caf50; /* Green */
+    color: white;
+  }
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  #productHeader {
+    font-weight: bolder 400px;
+    color: #e0c097;
+    font-size: 150%;
+  }
+  
+  p {
+    font-weight: bolder;
+  }
+  
+  li {
+    color: #ff7878;
+    font-weight: bold;
+  }
+  
+  img {
+    width: 600px;
+    border-radius: 20px;
+  }
+  
+  hr {
+    border: solid #f3f0d7;
+  }
+  
+  #info-block {
+    width: 600px;
+    border-style: dotted;
+    border-color: #ff7878;
+    border-width: 8px;
+    padding-left: 10px;
+  }
+  

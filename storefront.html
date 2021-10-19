@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Mikas Wibbly Wobbly Shop</title>
+    <link rel="stylesheet" href="storefront.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 id="shopnameHeader">Mikas Wibbly Wobbly Shop</h1>
+    <div id="filterDiv">
+      <label id="labelInput">Filter on Customer rating (1-5):</label>
+      <input
+        id="inputValue"
+        type="number"
+        placeholder="Type in a number"
+        min="1"
+        max="5"
+      />
+      <button id="filterButton">Click to filter</button>
+      <p id="inputError"></p>
+      <p id="inputMessage"></p>
+    </div>
+    <div id="shoppingDiv">
+      <h3 id="shoppingCartHeader">Shopping Cart is empty</h3>
+      <p id="shoppingTotal"></p>
+      <ul id="shoppingCart"></ul>
+    </div>
+    <hr />
+    <h3 id="productHeader">Products for sale</h3>
+    <div id="productWrapper"></div>
+
+    <script src="storefront.js"></script>
+  </body>
+</html>
