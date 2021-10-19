@@ -25,28 +25,16 @@ function filterOnRating(products, ratingValue) {
   });
 }
 
-function validateInput(ratingValue) {
-  if (ratingValue < 0 || ratingValue > 5) {
-    inputError.innerHTML = `Please enter a rating between 1-5`;
-    setTimeout(() => inputError.remove(), 3000);
-    // filterDiv.appendChild(ratingError);
-    return false;
-  } else {
-    return true;
-  }
-}
-
 filterButton.addEventListener("click", () => {
   const ratingValue = Number(inputValue.value);
-  if (validateInput(ratingValue)) {
-    const ratedItems = filterOnRating(productData, ratingValue);
 
-    productWrapper.textContent = "";
+  const ratedItems = filterOnRating(productData, ratingValue);
 
-    inputMessage.innerHTML = `Showing products rated ${inputValue.value} and higher`;
+  productWrapper.textContent = "";
 
-    return renderProductList(ratedItems);
-  }
+  inputMessage.innerHTML = `Showing products rated ${inputValue.value} and higher`;
+
+  return renderProductList(ratedItems);
 });
 
 function renderProductList(products) {
@@ -86,7 +74,7 @@ function renderProductList(products) {
     } else {
       productRating.innerHTML = `Customer rating: ${product.rating}`;
     }
-    
+
     const productStock = document.createElement("p");
     productStock.innerHTML = `Left in stock: ${product.stock}`;
 
