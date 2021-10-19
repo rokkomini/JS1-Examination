@@ -36,8 +36,7 @@ function validateInput(ratingValue) {
   }
 }
 
-filterButton.addEventListener("click", function (e) {
-  // e.preventDefault;
+filterButton.addEventListener("click", () => {
   const ratingValue = Number(inputValue.value);
   if (validateInput(ratingValue)) {
     const ratedItems = filterOnRating(productData, ratingValue);
@@ -82,15 +81,19 @@ function renderProductList(products) {
     productPrice.innerHTML = `Price: ${product.price} kr`;
 
     const productRating = document.createElement("p");
-    productRating.innerHTML = `Customer rating: ${product.rating}`;
-
+    if (product.rating === undefined) {
+      productRating.innerHTML = "No rating available";
+    } else {
+      productRating.innerHTML = `Customer rating: ${product.rating}`;
+    }
+    
     const productStock = document.createElement("p");
     productStock.innerHTML = `Left in stock: ${product.stock}`;
 
     const purchaseButton = document.createElement("button");
     purchaseButton.innerText = "Buy me!";
-    purchaseButton.addEventListener("click", function (e) {
-      e.preventDefault();
+    purchaseButton.addEventListener("click", () => {
+      //e.preventDefault();
 
       customer.addToTransactions(product.name, product.price);
 
